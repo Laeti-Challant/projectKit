@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Générateur interactif de cahier des charges pour vos projets web">
+    <title>Générateur de Cahier des Charges</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- En-tête de l'application -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">📋 Générateur de Cahier des Charges</h1>
+            <p class="header-subtitle">Créez votre cahier des charges étape par étape</p>
+            
+            <nav class="header-nav">
+                <button type="button" id="btn-about" class="btn btn-secondary">
+                    ℹ️ À propos
+                </button>
+                <button type="button" id="btn-save" class="btn btn-secondary">
+                    💾 Sauvegarder
+                </button>
+                <button type="button" id="btn-load" class="btn btn-secondary">
+                    📂 Charger
+                </button>
+                <button type="button" id="btn-export" class="btn btn-primary">
+                    📄 Exporter PDF
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="main">
+        <div class="container">
+            <!-- Barre de progression -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <p class="progress-text">
+                    Section <span id="current-section">1</span> sur <span id="total-sections">9</span>
+                    (<span id="progress-percent">0</span>%)
+                </p>
+            </div>
+
+            <!-- Navigation par sections -->
+            <nav class="sections-nav" id="sections-nav" aria-label="Navigation des sections">
+                <!-- Généré dynamiquement par JS -->
+            </nav>
+
+            <!-- Formulaire principal -->
+            <div class="form-wrapper">
+                <form id="main-form" class="form" novalidate>
+                    <!-- Titre de la section courante -->
+                    <h2 class="section-title" id="section-title">Chargement...</h2>
+                    
+                    <!-- Contenu du formulaire généré dynamiquement -->
+                    <div id="form-content" class="form-content">
+                        <!-- Généré dynamiquement par JS -->
+                    </div>
+                </form>
+
+                <!-- Boutons de navigation -->
+                <div class="form-actions">
+                    <button type="button" id="btn-prev" class="btn btn-secondary" disabled>
+                        ← Précédent
+                    </button>
+                    <button type="button" id="btn-next" class="btn btn-primary">
+                        Suivant →
+                    </button>
+                </div>
+            </div>
+
+            <!-- Messages de statut (sauvegarde, erreurs, etc.) -->
+            <div id="toast-container" class="toast-container" aria-live="polite">
+                <!-- Les toasts apparaissent ici -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <p>Créé avec ❤️ pour faciliter vos projets web | Données sauvegardées localement</p>
+        </div>
+    </footer>
+
+    <!-- Modal "À propos" -->
+    <dialog id="modal-about" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>📋 À propos</h2>
+                <button type="button" id="close-modal" class="btn-close" aria-label="Fermer">
+                    ✕
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Cette application vous aide à créer un <strong>cahier des charges structuré</strong> 
+                    pour vos projets web, étape par étape.
+                </p>
+                
+                <h3>✨ Fonctionnalités</h3>
+                <ul>
+                    <li>📝 Formulaire guidé en 9 sections</li>
+                    <li>💾 Sauvegarde automatique de votre travail</li>
+                    <li>📄 Export PDF professionnel</li>
+                    <li>🔒 Vos données restent locales (localStorage)</li>
+                </ul>
+
+                <h3>🚀 Technologies</h3>
+                <p>Projet créé avec JavaScript vanilla, HTML5 et CSS3</p>
+
+                <h3>📖 Comment utiliser ?</h3>
+                <ol>
+                    <li>Remplissez les sections une par une</li>
+                    <li>Vos données sont sauvegardées automatiquement</li>
+                    <li>Exportez votre document en PDF quand vous avez terminé</li>
+                </ol>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
