@@ -1,15 +1,48 @@
 # 📋 ProjectKit
 
-Générateur interactif de cahier des charges pour projets web avec sauvegarde automatique et export PDF
+ProjectKit est un projet personnel en cours de refonte, visant à évoluer d’un générateur de cahier des charges
+vers un outil de gestion de projet orienté développeurs.
 
-## ✨ Fonctionnalités
+L’objectif est de proposer un outil permettant de structurer rapidement un projet,
+de réduire la charge cognitive et de faire gagner du temps,
+aussi bien aux développeurs juniors qu’aux profils plus expérimentés.
+
+## 🧭 Contexte
+
+ProjectKit a été initialement conçu comme un générateur interactif de cahier des charges pour projets web.
+
+Le projet est actuellement en phase de pause volontaire et de réflexion,
+afin d’intégrer des notions de gestion de projet IT vues en formation CDA.
+
+Cette phase de refonte vise à réaligner l’outil avec des pratiques professionnelles
+et une vision produit plus large.
+
+## 🎯 Cible
+
+- Développeurs juniors souhaitant structurer leurs projets
+- Développeurs confirmés recherchant un outil simple et efficace pour gagner du temps
+
+## 🔮 Perspectives d’évolution
+
+- Structuration de projet (backlog, tâches, priorisation)
+- Suivi d’avancement
+- Amélioration de l’ergonomie
+
+## ✨ Fonctionnalités actuelles
+
+Les fonctionnalités ci-dessous correspondent à une première version fonctionnelle
+servant de base à la réflexion et à la refonte du projet.
 
 - 📝 Formulaire guidé en 9 sections
 - 💾 Sauvegarde automatique (localStorage)
 - 🔄 Navigation fluide entre les sections
 - 📊 Barre de progression visuelle
-- ⌨️ Raccourcis clavier (Alt+Flèches, Ctrl+S)
-- 📄 Export PDF _(en développement)_
+
+## 🧠 Apports du projet
+
+- Réflexion produit et expérience développeur
+- Structuration d’un projet long
+- Prise de recul et refonte fonctionnelle
 
 ## 🚀 Installation
 
@@ -31,6 +64,12 @@ cd projectKit
 
 ```bash
 python -m http.server 8000
+```
+
+ou
+
+```bash
+python3 -m http.server 8000
 # Puis ouvrir http://localhost:8000
 ```
 
@@ -57,23 +96,12 @@ npx live-server
 1. Remplissez les sections une par une
 2. Vos données sont sauvegardées automatiquement
 3. Naviguez librement entre les sections
-4. Exportez votre cahier des charges en PDF _(à venir)_
 
 ## ⌨️ Raccourcis clavier
 
 - `Alt + →` : Section suivante
 - `Alt + ←` : Section précédente
 - `Ctrl + S` : Sauvegarde manuelle
-
-## 🎯 Roadmap
-
-- [x] Structure du projet
-- [x] Navigation entre sections
-- [x] Sauvegarde automatique
-- [ ] Validation des champs
-- [ ] Export PDF
-- [ ] Version mobile optimisée
-- [ ] Backend avec authentification
 
 ## 📝 Licence
 
